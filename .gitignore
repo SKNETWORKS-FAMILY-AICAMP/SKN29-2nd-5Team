@@ -1,0 +1,40 @@
+# Frontend
+node_modules/
+dist/
+.vite/
+
+# Backend / Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+ml_env/
+
+# Environment
+.env
+.env.local
+*.env
+
+# Database / cache
+*.db
+*.sqlite
+*.sqlite3
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs
+*.log
+logs/
+
+# =========================
+# Large backend data files
+# =========================
+backend/backend_data/_cache/
+backend/backend_data/*.pkl
+backend/backend_data/*.parquet
