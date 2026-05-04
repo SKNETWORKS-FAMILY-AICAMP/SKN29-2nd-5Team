@@ -171,7 +171,6 @@ SKN29-2nd-5Team/
 | xgboost | 3.1.3 |
 | pandas | 2.2.3 |
 | numpy | 2.3.5 |
-| joblib | 1.5.3 |
 
 최종 하이퍼파라미터:
 
@@ -210,13 +209,14 @@ SKN29-2nd-5Team/
 
 ## 8. 모델 로드 및 예측 예시
 
-`best_model.zip` 압축을 해제하면 `xgboost_tuned_v1.pkl`을 사용할 수 있다. pkl 파일은 `model`과 `feature_cols`를 포함한 joblib 패키지이다.
+`best_model.zip` 압축을 해제하면 `xgboost_tuned_v1.pkl`을 사용할 수 있다. pkl 파일은 `pickle`로 직렬화된 객체이며, 내부에 `model`과 `feature_cols`를 포함한다.
 
 ```python
-import joblib
+import pickle
 import pandas as pd
 
-model_package = joblib.load("3_model/xgboost_tuned_v1.pkl")
+with open("3_model/xgboost_tuned_v1.pkl", "rb") as f:
+    model_package = pickle.load(f)
 
 model = model_package["model"]
 feature_cols = model_package["feature_cols"]

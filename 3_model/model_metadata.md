@@ -19,7 +19,6 @@
 | xgboost | 3.1.3 |
 | pandas | 2.2.3 |
 | numpy | 2.3.5 |
-| joblib | 1.5.3 |
 
 ### 모델 성능 (최종)
 | 지표 | 값 |
@@ -97,11 +96,12 @@
 
 ### 모델 로드 및 예측 예시
 ```python
-import joblib
+import pickle
 import pandas as pd
 
 # 모델 패키지 로드
-model_package = joblib.load("xgboost_tuned_v1.pkl")
+with open("xgboost_tuned_v1.pkl", "rb") as f:
+    model_package = pickle.load(f)
 
 # pkl 내부 구성 요소 사용
 model = model_package["model"]
@@ -159,7 +159,7 @@ print(f"화면 표시용 예상 대여량: {round(prediction)}대")
 4. XGBoost Regressor 학습 코드 실행
 5. 검증 데이터와 테스트 데이터에 대해 MAE, RMSE, WAPE, R2 평가
 6. 최종 모델을 `xgboost_tuned_v1.pkl`로 저장
-7. 백엔드에서는 `joblib.load()`로 pkl 파일을 불러와 예측 API에서 사용
+7. 백엔드에서는 `pickle.load()`로 pkl 파일을 불러와 예측 API에서 사용
 
 ### 알려진 한계점
 - 모델은 학습 당시 사용한 28개 Feature가 모두 준비되어야 정상적으로 예측할 수 있다.
