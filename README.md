@@ -64,6 +64,74 @@
 
 ---
 
+## 🛠️ 사용 기술 및 주요 기능
+
+### Language
+
+| 아이콘 | 이름 | 사용 목적 |
+|---|---|---|
+| <img src="./docs/icons/python.png" width="28" /> | Python | 데이터 전처리, 머신러닝 모델 학습, FastAPI 백엔드 구현 |
+| <img src="./docs/icons/javascript.png" width="28" /> | JavaScript | React 기반 프론트엔드 화면 및 API 연동 구현 |
+| <img src="./docs/icons/html5.png" width="28" /> | HTML5 | Vite 기반 웹 페이지 진입 구조 작성 |
+| <img src="./docs/icons/css3.png" width="28" /> | CSS3 | 대시보드 레이아웃, 사이드 연동 구현 |
+| <img src="./docs/icons/html5.png" width="28" /> | HTML5 | Vite 기반 웹 페이지 진바, 차트 페이지 UI 스타일링 |
+| <img src="./docs/icons/sql.png" width="28" /> | SQL | 따릉이 대여량, 대여소, 캐시 테이블 설계 및 조회 |
+
+### Frontend
+
+| 아이콘 | 이름 | 사용 목적 |
+|---|---|---|
+| <img src="./docs/icons/react.png" width="28" /> | React | 대여량 분포 분석, 대여량 차트 분석, 실시간 대여소 현황 화면 구현 |
+| <img src="./docs/icons/vite.png" width="28" /> | Vite | React 개발 서버 및 프론트엔드 빌드 환경 구성 |
+| <img src="./docs/icons/axios.png" width="28" /> | Axios | 프론트엔드와 FastAPI 백엔드 간 HTTP 통신 |
+| <img src="./docs/icons/recharts.png" width="28" /> | Recharts | 연도별 이용 건수, 월별 흐름, 대여소 Top5, 자치구 Top5 시각화 |
+| <img src="./docs/icons/leaflet.png" width="28" /> | Leaflet | 실시간 대여소 위치 지도 및 마커 시각화 |
+
+### Backend
+
+| 아이콘 | 이름 | 사용 목적 |
+|---|---|---|
+| <img src="./docs/icons/fastapi.png" width="28" /> | FastAPI | 대여량 분석, 차트, 실시간 대여소, 예측 API 서버 구현 |
+| <img src="./docs/icons/uvicorn.png" width="28" /> | Uvicorn | FastAPI 애플리케이션 실행 서버 |
+| <img src="./docs/icons/pydantic.png" width="28" /> | Pydantic | 환경 변수 및 설정값 관리 |
+| <img src="./docs/icons/mysql.png" width="28" /> | MySQL | 따릉이 대여 이력, 대여소 정보, 히트맵 캐시 데이터 저장 |
+| <img src="./docs/icons/sqlalchemy.png" width="28" /> | SQLAlchemy | Python 백엔드와 MySQL 데이터베이스 연결 관리 |
+
+### Data Processing & Machine Learning
+
+| 아이콘 | 이름 | 사용 목적 |
+|---|---|---|
+| <img src="./docs/icons/pandas.png" width="28" /> | Pandas | 대여 이력, 날씨, 공휴일, 대여소 데이터 전처리 |
+| <img src="./docs/icons/numpy.png" width="28" /> | NumPy | 수치 연산 및 모델 입력 데이터 처리 |
+| <img src="./docs/icons/scikit-learn.png" width="28" /> | Scikit-learn | 모델 학습 데이터 분리, 평가 지표 계산, 전처리 보조 |
+| <img src="./docs/icons/xgboost.png" width="28" /> | XGBoost | 따릉이 대여량 예측 회귀 모델 학습 |
+| <img src="./docs/icons/lightgbm.png" width="28" /> | LightGBM | 대여량 예측 모델 비교 및 성능 검증 |
+| <img src="./docs/icons/jupyter.png" width="28" /> | Jupyter Notebook | 데이터 전처리 및 모델링 실험 기록 |
+| <img src="./docs/icons/parquet.png" width="28" /> | Parquet | 모델 학습용 피처 데이터 저장 |
+| <img src="./docs/icons/joblib.png" width="28" /> | Joblib / Pickle | 학습된 모델 파일 저장 및 백엔드 로드 |
+
+### External API & Data
+
+| 아이콘 | 이름 | 사용 목적 |
+|---|---|---|
+| <img src="./docs/icons/seoul.png" width="28" /> | 서울 열린데이터광장 API | 실시간 따릉이 대여소 정보 수집 |
+| <img src="./docs/icons/bike.png" width="28" /> | 서울시 공공자전거 따릉이 데이터 | 대여 이력 및 대여소 기반 수요 분석 |
+| <img src="./docs/icons/weather.png" width="28" /> | 기상 데이터 | 날씨 요인을 반영한 대여량 예측 피처 구성 |
+| <img src="./docs/icons/calendar.png" width="28" /> | 공휴일 데이터 | 평일, 주말, 공휴일 수요 패턴 반영 |
+
+### Tools
+
+| 아이콘 | 이름 | 사용 목적 |
+|---|---|---|
+| <img src="./docs/icons/git.png" width="28" /> | Git | 프로젝트 버전 관리 |
+| <img src="./docs/icons/github.png" width="28" /> | GitHub | 프로젝트 코드 공유 및 협업 |
+| <img src="./docs/icons/vscode.png" width="28" /> | VS Code | 프론트엔드 및 백엔드 개발 환경 |
+| <img src="./docs/icons/mysql-workbench.png" width="28" /> | MySQL Workbench | ERD 확인 및 데이터베이스 구조 관리 |
+| <img src="./docs/icons/npm.png" width="28" /> | npm | 프론트엔드 패키지 설치 및 실행 관리 |
+
+---
+
+
 ## 데이터 및 산출물 전체 구조
 
 ```text
