@@ -5,7 +5,7 @@
 
 ---
 
-## 👥 팀원 소개
+## 팀원 소개
 
 <table>
   <tr>
@@ -68,35 +68,35 @@
 
 ```text
 SKN29-2nd-5Team/
-├── README.md                   
-├── .env                
-├── .gitignore                  
+├── README.md
+├── .env
+├── .gitignore
 │
-├── backend/                    
+├── backend/
 │   ├── main.py
 │   ├── requirements.txt
-│   ├── api/                    
+│   ├── api/
 │   │   ├── __init__.py
 │   │   ├── chart.py
 │   │   ├── predict.py
 │   │   ├── realtime.py
-│   │   └── stats.py
-│   ├── core/                   
+│   │   ├── stats.py
+│   │   └── validation.py
+│   ├── core/
 │   │   ├── __init__.py
 │   │   ├── config.py
 │   │   └── database.py
-│   └── services/              
+│   └── services/
 │       ├── __init__.py
 │       ├── chart_service.py
 │       ├── data_utils.py
 │       ├── realtime_service.py
 │       └── validation_service.py
 │
-├── frontend/                  
-│   ├── index.html
+├── frontend/
 │   ├── package.json
 │   ├── vite.config.js
-│   ├── public/                
+│   ├── public/
 │   │   ├── home__main.png
 │   │   └── home_top.png
 │   └── src/
@@ -104,43 +104,48 @@ SKN29-2nd-5Team/
 │       ├── App.jsx
 │       ├── App.css
 │       ├── index.css
-│       ├── api/               
-│       │   └── client.js
-│       └── pages/             
+│       ├── api/
+│       ├── assets/
+│       └── pages/
 │           ├── Home.jsx
 │           ├── HeatmapPage.jsx
 │           ├── ChartPage.jsx
 │           └── Ttareungyeojido.jsx
 │
-├── models/                    
-│   ├── best_model.zip         
-│   ├── xgboost_tuned_v1.pkl    
-│   ├── lgbm_v1.pkl            
-│   └── model_metadata.md   
+├── models/
+│   ├── best_model.zip
+│   ├── xgboost_tuned_v1.pkl
+│   ├── lgbm_v1.pkl
+│   └── model_metadata.md
 │
-├── data/                    
-│   ├── raw/                
-│   │   ├── bike_history/     
-│   │   ├── holiday/           
-│   │   ├── station/         
-│   │   └── weather/          
-│   └── processed/            
+├── data/
+│   ├── raw/
+│   │   ├── bike_history/
+│   │   ├── holiday/
+│   │   ├── station/
+│   │   └── weather/
+│   └── processed/
 │       ├── train_2023_parts/
 │       ├── valid_2024_parts/
 │       ├── test_2025_parts/
-│       └── bike_final_28features.parquet 
+│       └── bike_final_features.parquet
 │
-├── notebooks/                
+├── notebooks/
 │   ├── 01_preprocessing_pipeline.ipynb
 │   └── 02_modeling_evaluation.ipynb
 │
-└── docs/                   
-    ├── database/             
-    │   ├── bike_db.png       
-    │   ├── bike_db.sql       
-    │   └── bike_db.md          
-    ├── 1_data_preprocessing_report.md  
-    └── 2_model_training_report.md      
+└── docs/
+    ├── database/
+    │   ├── bike_db.png
+    │   ├── schema.sql
+    │   └── bike_db.md
+    ├── team/
+    │   ├── choi_jiyong.png
+    │   ├── jung_seung.png
+    │   ├── park_junhee.png
+    │   └── yoon_daesung.png
+    ├── 1_data_preprocessing_report.md
+    └── 2_model_training_report.md  
 ```
 
 ---
