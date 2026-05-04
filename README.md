@@ -9,26 +9,79 @@
 
 ```text
 SKN29-2nd-5Team/
-├── 1_data_preprocessing_report.md
-├── 2_model_training_report.md
-├── 3_model/
-│   ├── best_model.zip
-│   │   └── xgboost_tuned_v1.pkl
-│   └── model_metadata.md
-├── data/
-│   ├── raw/
-│   │   ├── bike_history/
-│   │   ├── holiday/
-│   │   ├── station/
-│   │   └── weather/
-│   └── processed/
+├── README.md                   
+├── .env                
+├── .gitignore                  
+│
+├── backend/                    
+│   ├── main.py
+│   ├── requirements.txt
+│   ├── api/                    
+│   │   ├── __init__.py
+│   │   ├── chart.py
+│   │   ├── predict.py
+│   │   ├── realtime.py
+│   │   └── stats.py
+│   ├── core/                   
+│   │   ├── __init__.py
+│   │   ├── config.py
+│   │   └── database.py
+│   └── services/              
+│       ├── __init__.py
+│       ├── chart_service.py
+│       ├── data_utils.py
+│       ├── realtime_service.py
+│       └── validation_service.py
+│
+├── frontend/                  
+│   ├── index.html
+│   ├── package.json
+│   ├── vite.config.js
+│   ├── public/                
+│   │   ├── home__main.png
+│   │   └── home_top.png
+│   └── src/
+│       ├── main.jsx
+│       ├── App.jsx
+│       ├── App.css
+│       ├── index.css
+│       ├── api/               
+│       │   └── client.js
+│       └── pages/             
+│           ├── Home.jsx
+│           ├── HeatmapPage.jsx
+│           ├── ChartPage.jsx
+│           └── Ttareungyeojido.jsx
+│
+├── models/                    
+│   ├── best_model.zip         
+│   ├── xgboost_tuned_v1.pkl    
+│   ├── lgbm_v1.pkl            
+│   └── model_metadata.md   
+│
+├── data/                    
+│   ├── raw/                
+│   │   ├── bike_history/     
+│   │   ├── holiday/           
+│   │   ├── station/         
+│   │   └── weather/          
+│   └── processed/            
 │       ├── train_2023_parts/
 │       ├── valid_2024_parts/
-│       └── test_2025_parts/
-├── notebooks/
+│       ├── test_2025_parts/
+│       └── bike_final_28features.parquet 
+│
+├── notebooks/                
 │   ├── 01_preprocessing_pipeline.ipynb
 │   └── 02_modeling_evaluation.ipynb
-└── README.md
+│
+└── docs/                   
+    ├── database/             
+    │   ├── bike_db.png       
+    │   ├── bike_db.sql       
+    │   └── bike_db.md          
+    ├── 1_data_preprocessing_report.md  
+    └── 2_model_training_report.md      
 ```
 
 ---
