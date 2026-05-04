@@ -5,6 +5,65 @@
 
 ---
 
+## 👥 팀원 소개
+
+<table>
+  <tr>
+    <th align="center">프로필</th>
+    <th align="center">이름</th>
+    <th align="center">GitHub</th>
+    <th align="center">담당 업무</th>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="./docs/team/park_junhee.png" width="120" />
+    </td>
+    <td align="center"><b>박준희</b></td>
+    <td align="center">
+      <a href="https://github.com/hijun318-eng">@hijun318-eng</a>
+    </td>
+    <td>
+      모델 설계 및 하이퍼파라미터 튜닝, GitHub 작성
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="./docs/team/yoon_daesung.png" width="120" />
+    </td>
+    <td align="center"><b>윤대성</b></td>
+    <td align="center">
+      <a href="https://github.com/YoonDaeSung-01">@YoonDaeSung-01</a>
+    </td>
+    <td>
+      데이터 전처리 및 모델 설계, 프로젝트 방향성 제시
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="./docs/team/jung_seung.png" width="120" />
+    </td>
+    <td align="center"><b>정승</b></td>
+    <td align="center">-</td>
+    <td>
+      모델 설계 및 PPT 제작, 발표
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="./docs/team/choi_jiyong.png" width="120" />
+    </td>
+    <td align="center"><b>최지용</b></td>
+    <td align="center">
+      <a href="https://github.com/antisdream">@antisdream</a>
+    </td>
+    <td>
+      모델 설계 및 프론트엔드 & 백엔드 제작, 시연 발표
+    </td>
+  </tr>
+</table>
+
+---
+
 ## 데이터 및 산출물 전체 구조
 
 ```text
