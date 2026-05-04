@@ -1,0 +1,14 @@
+fastapi
+uvicorn[standard]
+pandas
+numpy
+requests
+python-dotenv
+sqlalchemy
+pymysql
+scikit-learn
+joblib
+openpyxl
+pyarrow
+xgboost
+lightgbm
