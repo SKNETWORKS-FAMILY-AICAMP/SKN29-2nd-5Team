@@ -70,8 +70,8 @@
 
 | 아이콘 | 이름 | 사용 목적 |
 |---|---|---|
-| <img src="./docs/icons/python.png" width="28" /> | Python | 데이터 전처리, 머신러닝 모델 학습, FastAPI 백엔드 구현 |
-| <img src="./docs/icons/javascript.png" width="28" /> | JavaScript | React 기반 프론트엔드 화면 및 API 연동 구현 |
+| <img src="./docs/icons/python.jpeg" width="28" /> | Python | 데이터 전처리, 머신러닝 모델 학습, FastAPI 백엔드 구현 |
+| <img src="./docs/icons/javascript.jpeg" width="28" /> | JavaScript | React 기반 프론트엔드 화면 및 API 연동 구현 |
 | <img src="./docs/icons/html5.png" width="28" /> | HTML5 | Vite 기반 웹 페이지 진입 구조 작성 |
 | <img src="./docs/icons/css3.png" width="28" /> | CSS3 | 대시보드 레이아웃, 사이드 연동 구현 |
 | <img src="./docs/icons/html5.png" width="28" /> | HTML5 | Vite 기반 웹 페이지 진바, 차트 페이지 UI 스타일링 |
@@ -82,20 +82,20 @@
 | 아이콘 | 이름 | 사용 목적 |
 |---|---|---|
 | <img src="./docs/icons/react.png" width="28" /> | React | 대여량 분포 분석, 대여량 차트 분석, 실시간 대여소 현황 화면 구현 |
-| <img src="./docs/icons/vite.png" width="28" /> | Vite | React 개발 서버 및 프론트엔드 빌드 환경 구성 |
+| <img src="./docs/icons/vite.jpeg" width="28" /> | Vite | React 개발 서버 및 프론트엔드 빌드 환경 구성 |
 | <img src="./docs/icons/axios.png" width="28" /> | Axios | 프론트엔드와 FastAPI 백엔드 간 HTTP 통신 |
 | <img src="./docs/icons/recharts.png" width="28" /> | Recharts | 연도별 이용 건수, 월별 흐름, 대여소 Top5, 자치구 Top5 시각화 |
-| <img src="./docs/icons/leaflet.png" width="28" /> | Leaflet | 실시간 대여소 위치 지도 및 마커 시각화 |
+| <img src="./docs/icons/leaflet.jpeg" width="28" /> | Leaflet | 실시간 대여소 위치 지도 및 마커 시각화 |
 
 ### Backend
 
 | 아이콘 | 이름 | 사용 목적 |
 |---|---|---|
 | <img src="./docs/icons/fastapi.png" width="28" /> | FastAPI | 대여량 분석, 차트, 실시간 대여소, 예측 API 서버 구현 |
-| <img src="./docs/icons/uvicorn.png" width="28" /> | Uvicorn | FastAPI 애플리케이션 실행 서버 |
+| <img src="./docs/icons/uvicorn.jpeg" width="28" /> | Uvicorn | FastAPI 애플리케이션 실행 서버 |
 | <img src="./docs/icons/pydantic.png" width="28" /> | Pydantic | 환경 변수 및 설정값 관리 |
 | <img src="./docs/icons/mysql.png" width="28" /> | MySQL | 따릉이 대여 이력, 대여소 정보, 히트맵 캐시 데이터 저장 |
-| <img src="./docs/icons/sqlalchemy.png" width="28" /> | SQLAlchemy | Python 백엔드와 MySQL 데이터베이스 연결 관리 |
+| <img src="./docs/icons/sqlalchemy.jpeg" width="28" /> | SQLAlchemy | Python 백엔드와 MySQL 데이터베이스 연결 관리 |
 
 ### Data Processing & Machine Learning
 
@@ -106,18 +106,18 @@
 | <img src="./docs/icons/scikit-learn.png" width="28" /> | Scikit-learn | 모델 학습 데이터 분리, 평가 지표 계산, 전처리 보조 |
 | <img src="./docs/icons/xgboost.png" width="28" /> | XGBoost | 따릉이 대여량 예측 회귀 모델 학습 |
 | <img src="./docs/icons/lightgbm.png" width="28" /> | LightGBM | 대여량 예측 모델 비교 및 성능 검증 |
-| <img src="./docs/icons/jupyter.png" width="28" /> | Jupyter Notebook | 데이터 전처리 및 모델링 실험 기록 |
+| <img src="./docs/icons/jupyter notebook.png" width="28" /> | Jupyter Notebook | 데이터 전처리 및 모델링 실험 기록 |
 | <img src="./docs/icons/parquet.png" width="28" /> | Parquet | 모델 학습용 피처 데이터 저장 |
-| <img src="./docs/icons/joblib.png" width="28" /> | Joblib / Pickle | 학습된 모델 파일 저장 및 백엔드 로드 |
+| <img src="./docs/icons/joblib pickle.png" width="28" /> | Joblib / Pickle | 학습된 모델 파일 저장 및 백엔드 로드 |
 
 ### External API & Data
 
 | 아이콘 | 이름 | 사용 목적 |
 |---|---|---|
-| <img src="./docs/icons/seoul.png" width="28" /> | 서울 열린데이터광장 API | 실시간 따릉이 대여소 정보 수집 |
-| <img src="./docs/icons/bike.png" width="28" /> | 서울시 공공자전거 따릉이 데이터 | 대여 이력 및 대여소 기반 수요 분석 |
+| <img src="./docs/icons/seoulopen.png" width="28" /> | 서울 열린데이터광장 API | 실시간 따릉이 대여소 정보 수집 |
+| <img src="./docs/icons/seoulbike.png" width="28" /> | 서울시 공공자전거 따릉이 데이터 | 대여 이력 및 대여소 기반 수요 분석 |
 | <img src="./docs/icons/weather.png" width="28" /> | 기상 데이터 | 날씨 요인을 반영한 대여량 예측 피처 구성 |
-| <img src="./docs/icons/calendar.png" width="28" /> | 공휴일 데이터 | 평일, 주말, 공휴일 수요 패턴 반영 |
+| <img src="./docs/icons/holiday.png" width="28" /> | 공휴일 데이터 | 평일, 주말, 공휴일 수요 패턴 반영 |
 
 ### Tools
 
@@ -125,8 +125,8 @@
 |---|---|---|
 | <img src="./docs/icons/git.png" width="28" /> | Git | 프로젝트 버전 관리 |
 | <img src="./docs/icons/github.png" width="28" /> | GitHub | 프로젝트 코드 공유 및 협업 |
-| <img src="./docs/icons/vscode.png" width="28" /> | VS Code | 프론트엔드 및 백엔드 개발 환경 |
-| <img src="./docs/icons/mysql-workbench.png" width="28" /> | MySQL Workbench | ERD 확인 및 데이터베이스 구조 관리 |
+| <img src="./docs/icons/vscode.jpeg" width="28" /> | VS Code | 프론트엔드 및 백엔드 개발 환경 |
+| <img src="./docs/icons/mysql workbench.png" width="28" /> | MySQL Workbench | ERD 확인 및 데이터베이스 구조 관리 |
 | <img src="./docs/icons/npm.png" width="28" /> | npm | 프론트엔드 패키지 설치 및 실행 관리 |
 
 ---
@@ -140,6 +140,10 @@ SKN29-2nd-5Team/
 ├── .env
 ├── .gitignore
 │
+├── 3_model/
+│   ├── best_model.zip
+│   └── model_metadata.md
+│
 ├── backend/
 │   ├── main.py
 │   ├── requirements.txt
@@ -150,10 +154,17 @@ SKN29-2nd-5Team/
 │   │   ├── realtime.py
 │   │   ├── stats.py
 │   │   └── validation.py
+│   ├── backend_data/
+│   │   ├── bike_2026_final_28features_for_model.parquet
+│   │   ├── lgbm_v1.pkl
+│   │   ├── xgboost_tuned_v1.pkl
+│   │   └── (기타 모델/설정 파일들)
 │   ├── core/
 │   │   ├── __init__.py
 │   │   ├── config.py
 │   │   └── database.py
+│   ├── database/
+│   │   └── schema.sql
 │   └── services/
 │       ├── __init__.py
 │       ├── chart_service.py
@@ -173,18 +184,16 @@ SKN29-2nd-5Team/
 │       ├── App.css
 │       ├── index.css
 │       ├── api/
+│       │   └── client.js
 │       ├── assets/
+│       │   ├── hero.png
+│       │   ├── react.svg
+│       │   └── vite.svg
 │       └── pages/
-│           ├── Home.jsx
-│           ├── HeatmapPage.jsx
 │           ├── ChartPage.jsx
+│           ├── HeatmapPage.jsx
+│           ├── Home.jsx
 │           └── Ttareungyeojido.jsx
-│
-├── models/
-│   ├── best_model.zip
-│   ├── xgboost_tuned_v1.pkl
-│   ├── lgbm_v1.pkl
-│   └── model_metadata.md
 │
 ├── data/
 │   ├── raw/
@@ -193,27 +202,30 @@ SKN29-2nd-5Team/
 │   │   ├── station/
 │   │   └── weather/
 │   └── processed/
-│       ├── train_2023_parts/
-│       ├── valid_2024_parts/
 │       ├── test_2025_parts/
-│       └── bike_final_features.parquet
+│       ├── train_2023_parts/
+│       └── valid_2024_parts/
 │
-├── notebooks/
-│   ├── 01_preprocessing_pipeline.ipynb
-│   └── 02_modeling_evaluation.ipynb
+├── docs/
+│   ├── 1_data_preprocessing_report.md
+│   ├── 2_model_training_report.md
+│   ├── database/
+│   │   ├── bike_db.png
+│   │   └── README.md
+│   ├── icons/
+│   │   └── (기술 스택 아이콘 이미지)
+│   └── team/
+│       ├── choi_jiyong.png
+│       ├── jung_seung.png
+│       ├── park_junhee.png
+│       └── yoon_daesung.png
 │
-└── docs/
-    ├── database/
-    │   ├── bike_db.png
-    │   ├── schema.sql
-    │   └── bike_db.md
-    ├── team/
-    │   ├── choi_jiyong.png
-    │   ├── jung_seung.png
-    │   ├── park_junhee.png
-    │   └── yoon_daesung.png
-    ├── 1_data_preprocessing_report.md
-    └── 2_model_training_report.md  
+├── image/
+│   └── 전처리_후_대여량_구간_분포.png
+│
+└── notebooks/
+    ├── 01_preprocessing_pipeline.ipynb
+    └── 02_modeling_evaluation.ipynb
 ```
 
 ---
