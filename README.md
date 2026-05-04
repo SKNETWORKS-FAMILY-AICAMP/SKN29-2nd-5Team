@@ -374,7 +374,7 @@ print(f"화면 표시용 예상 대여량: {round(prediction)}대")
 6. XGBoost Regressor를 학습하고 Validation/Test 기준 MAE, RMSE, WAPE, R2를 평가한다.
 7. 최종 모델을 `xgboost_tuned_v1.pkl`로 저장하고 `3_model/best_model.zip`에 패키징한다.
 
----md
+---
 ## 12. 실행 방법
 
 ### 1. 백엔드 실행
