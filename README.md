@@ -43,8 +43,9 @@
       <img src="./docs/team/jung_seung.png" width="120" />
     </td>
     <td align="center"><b>정승</b></td>
-    <td align="center">-</td>
+    <td align="center">
       <a href="https://github.com/jseung89">@jseung89</a>
+    </td>
     <td>
       모델 설계 및 PPT 제작, 발표
     </td>
