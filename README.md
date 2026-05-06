@@ -44,6 +44,7 @@
     </td>
     <td align="center"><b>정승</b></td>
     <td align="center">-</td>
+      <a href="https://github.com/jseung89">@jseung89</a>
     <td>
       모델 설계 및 PPT 제작, 발표
     </td>
