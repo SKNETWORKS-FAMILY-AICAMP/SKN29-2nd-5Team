@@ -5,6 +5,7 @@
 
 ---
 
+<<<<<<< HEAD
 ## 평가자 빠른 확인
 
 본 README는 평가자가 프로젝트의 **문제 정의 → 데이터 전처리 → 모델링 → 웹 서비스 구현 → 실행 방법 → 산출물** 흐름을 빠르게 확인할 수 있도록 구성하였다.
@@ -37,6 +38,8 @@
 
 ---
 
+=======
+>>>>>>> origin/main
 ## 팀원 소개
 
 <table>
@@ -241,7 +244,10 @@ SKN29-2nd-5Team/
 │       └── valid_2024_parts/
 │
 ├── docs/
+<<<<<<< HEAD
 │   ├── SKN29-2nd-5Team.pptx
+=======
+>>>>>>> origin/main
 │   ├── 1_data_preprocessing_report.md
 │   ├── 2_model_training_report.md
 │   ├── database/
@@ -249,6 +255,7 @@ SKN29-2nd-5Team/
 │   │   └── README.md
 │   ├── icons/
 │   │   └── (기술 스택 아이콘 이미지)
+<<<<<<< HEAD
 │   ├── team/
 │   │   ├── choi_jiyong.png
 │   │   ├── jung_seung.png
@@ -263,6 +270,13 @@ SKN29-2nd-5Team/
 │       ├── Homepage6.png
 │       ├── Homepage7.png
 │       └── Homepage8.png
+=======
+│   └── team/
+│       ├── choi_jiyong.png
+│       ├── jung_seung.png
+│       ├── park_junhee.png
+│       └── yoon_daesung.png
+>>>>>>> origin/main
 │
 ├── image/
 │   └── 전처리_후_대여량_구간_분포.png
@@ -301,6 +315,7 @@ SKN29-2nd-5Team/
 | 실시간 대여소 현황 | 서울시 실시간 따릉이 API 기반 대여소 상태 지도 표시 | 서울 열린데이터광장 API, `bike_markers` |
 | 1시간 뒤 예측 잔여 수 | 실시간 자전거 보유 수와 학습 모델 예측 결과를 결합하여 예상 잔여 대수 제공 | 실시간 API, XGBoost 모델 |
 
+<<<<<<< HEAD
 > 발표 및 시연 단계에서는 SQL에 적재한 데이터를 `bike_usage_heatmap_cache`로 집계하여 빠르게 시각화하였다. 실제 배포 환경에서는 운영 DB에 적재된 최신 데이터를 기준으로 캐시를 갱신하여 사용하는 구조를 목표로 한다.
 
 ### 2-1. 메인 화면
@@ -366,6 +381,9 @@ SKN29-2nd-5Team/
 <p align="center">
   <img src="./docs/webservice/Homepage8.png" width="850" />
 </p>
+=======
+sql에 적재한 데이터를 'bike_usage_cache'로 저장하여 프로젝트 발표에 사용하였으나, 실제 배포 환경에서는 sql에 적재한 데이터를 사용해야한다.
+>>>>>>> origin/main
 
 ---
 
