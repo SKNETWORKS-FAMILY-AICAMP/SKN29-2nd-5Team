@@ -5,39 +5,211 @@
 
 ---
 
-## 산출물 전체 구조
+## 평가자 빠른 확인
+
+본 README는 평가자가 프로젝트의 **문제 정의 → 데이터 전처리 → 모델링 → 웹 서비스 구현 → 실행 방법 → 산출물** 흐름을 빠르게 확인할 수 있도록 구성하였다.
+
+### 주요 산출물 바로가기
+
+| 구분 | 경로 | 확인 내용 |
+|---|---|---|
+| 프로젝트 발표 자료 | [`docs/SKN29-2nd-5Team.pptx`](./docs/SKN29-2nd-5Team.pptx) | 프로젝트 개요, 전처리 과정, 피처 설계, 모델 선정, 서비스 화면 시연, 한계점 |
+| 데이터 전처리 결과서 | [`docs/1_data_preprocessing_report.md`](./docs/1_data_preprocessing_report.md) | 원천 데이터, 전처리 방식, 최종 학습 데이터 구성 |
+| 모델 학습 결과서 | [`docs/2_model_training_report.md`](./docs/2_model_training_report.md) | Baseline, XGBoost, LightGBM, GRU 성능 비교 및 최종 모델 선정 근거 |
+| 모델 메타데이터 | [`3_model/model_metadata.md`](./3_model/model_metadata.md) | 최종 모델 환경, 입력 피처, 하이퍼파라미터, 예측 예시 |
+| 웹 서비스 구현 화면 | [`docs/webservice/`](./docs/webservice/) | 메인 화면, 히트맵, 차트, 실시간 대여소 현황, 1시간 뒤 예측 잔여 대수 화면 |
+| DB/ERD 문서 | [`docs/database/`](./docs/database/) | 서비스용 테이블 구조, ERD, 스키마 |
+
+### README 목차
+
+| 순서 | 섹션 | 평가 포인트 |
+|---:|---|---|
+| 1 | 프로젝트 개요 | 문제 유형, 예측 대상, 활용 방안 |
+| 2 | 웹 서비스 주요 기능 및 구현 화면 | 실제 구현 화면과 기능 설명 |
+| 3 | 데이터셋 소개 | 사용 데이터, 기간, 학습/검증/테스트 분리 |
+| 4 | DB/ERD 구조 | 서비스 데이터베이스 구조와 캐시 테이블 활용 |
+| 5 | 전처리 요약 | 타겟 생성, 외부 데이터 결합, 피처 생성 |
+| 6 | 모델링 전략 | 평가 지표와 후보 모델 선정 이유 |
+| 7 | 모델 성능 결과 | Baseline 대비 최종 모델 성능 개선 |
+| 8~10 | 최종 모델 메타데이터·해석·예측 예시 | 모델 재현성과 예측 로직 |
+| 11~12 | 재현 방법·실행 방법 | 로컬 실행 및 API 확인 방법 |
+| 13 | 한계점 및 향후 개선 방향 | 운영 적용 시 보완 과제 |
+
+---
+
+## 팀원 소개
+
+<table>
+  <tr>
+    <th align="center">프로필</th>
+    <th align="center">이름</th>
+    <th align="center">GitHub</th>
+    <th align="center">담당 업무</th>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="./docs/team/park_junhee.png" width="120" />
+    </td>
+    <td align="center"><b>박준희</b></td>
+    <td align="center">
+      <a href="https://github.com/hijun318-eng">@hijun318-eng</a>
+    </td>
+    <td>
+      모델 설계 및 하이퍼파라미터 튜닝, GitHub 작성
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="./docs/team/yoon_daesung.png" width="120" />
+    </td>
+    <td align="center"><b>윤대성</b></td>
+    <td align="center">
+      <a href="https://github.com/YoonDaeSung-01">@YoonDaeSung-01</a>
+    </td>
+    <td>
+      데이터 전처리 및 모델 설계, 프로젝트 방향성 제시
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="./docs/team/jung_seung.png" width="120" />
+    </td>
+    <td align="center"><b>정승</b></td>
+    <td align="center">
+      <a href="https://github.com/jseung89">@jseung89</a>
+    </td>
+    <td>
+      모델 설계 및 PPT 제작, 발표
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="./docs/team/choi_jiyong.png" width="120" />
+    </td>
+    <td align="center"><b>최지용</b></td>
+    <td align="center">
+      <a href="https://github.com/antisdream">@antisdream</a>
+    </td>
+    <td>
+      모델 설계 및 프론트엔드 & 백엔드 제작, 시연 발표
+    </td>
+  </tr>
+</table>
+
+---
+
+## 🛠️ 사용 기술 및 주요 기능
+
+### Language
+
+| 아이콘 | 이름 | 사용 목적 |
+|---|---|---|
+| <img src="./docs/icons/python.jpeg" width="28" /> | Python | 데이터 전처리, 머신러닝 모델 학습, FastAPI 백엔드 구현 |
+| <img src="./docs/icons/javascript.jpeg" width="28" /> | JavaScript | React 기반 프론트엔드 화면 및 API 연동 구현 |
+| <img src="./docs/icons/html5.png" width="28" /> | HTML5 | Vite 기반 웹 페이지 진입 구조 작성 |
+| <img src="./docs/icons/css3.png" width="28" /> | CSS3 | 대시보드 레이아웃, 사이드 연동 구현 |
+| <img src="./docs/icons/html5.png" width="28" /> | HTML5 | Vite 기반 웹 페이지 진바, 차트 페이지 UI 스타일링 |
+| <img src="./docs/icons/sql.png" width="28" /> | SQL | 따릉이 대여량, 대여소, 캐시 테이블 설계 및 조회 |
+
+### Frontend
+
+| 아이콘 | 이름 | 사용 목적 |
+|---|---|---|
+| <img src="./docs/icons/react.png" width="28" /> | React | 대여량 분포 분석, 대여량 차트 분석, 실시간 대여소 현황 화면 구현 |
+| <img src="./docs/icons/vite.jpeg" width="28" /> | Vite | React 개발 서버 및 프론트엔드 빌드 환경 구성 |
+| <img src="./docs/icons/axios.png" width="28" /> | Axios | 프론트엔드와 FastAPI 백엔드 간 HTTP 통신 |
+| <img src="./docs/icons/recharts.png" width="28" /> | Recharts | 연도별 이용 건수, 월별 흐름, 대여소 Top5, 자치구 Top5 시각화 |
+| <img src="./docs/icons/leaflet.jpeg" width="28" /> | Leaflet | 실시간 대여소 위치 지도 및 마커 시각화 |
+
+### Backend
+
+| 아이콘 | 이름 | 사용 목적 |
+|---|---|---|
+| <img src="./docs/icons/fastapi.png" width="28" /> | FastAPI | 대여량 분석, 차트, 실시간 대여소, 예측 API 서버 구현 |
+| <img src="./docs/icons/uvicorn.jpeg" width="28" /> | Uvicorn | FastAPI 애플리케이션 실행 서버 |
+| <img src="./docs/icons/pydantic.png" width="28" /> | Pydantic | 환경 변수 및 설정값 관리 |
+| <img src="./docs/icons/mysql.png" width="28" /> | MySQL | 따릉이 대여 이력, 대여소 정보, 히트맵 캐시 데이터 저장 |
+| <img src="./docs/icons/sqlalchemy.jpeg" width="28" /> | SQLAlchemy | Python 백엔드와 MySQL 데이터베이스 연결 관리 |
+
+### Data Processing & Machine Learning
+
+| 아이콘 | 이름 | 사용 목적 |
+|---|---|---|
+| <img src="./docs/icons/pandas.png" width="28" /> | Pandas | 대여 이력, 날씨, 공휴일, 대여소 데이터 전처리 |
+| <img src="./docs/icons/numpy.png" width="28" /> | NumPy | 수치 연산 및 모델 입력 데이터 처리 |
+| <img src="./docs/icons/scikit-learn.png" width="28" /> | Scikit-learn | 모델 학습 데이터 분리, 평가 지표 계산, 전처리 보조 |
+| <img src="./docs/icons/xgboost.png" width="28" /> | XGBoost | 따릉이 대여량 예측 회귀 모델 학습 |
+| <img src="./docs/icons/lightgbm.png" width="28" /> | LightGBM | 대여량 예측 모델 비교 및 성능 검증 |
+| <img src="./docs/icons/jupyter notebook.png" width="28" /> | Jupyter Notebook | 데이터 전처리 및 모델링 실험 기록 |
+| <img src="./docs/icons/parquet.png" width="28" /> | Parquet | 모델 학습용 피처 데이터 저장 |
+| <img src="./docs/icons/joblib pickle.png" width="28" /> | Joblib / Pickle | 학습된 모델 파일 저장 및 백엔드 로드 |
+
+### External API & Data
+
+| 아이콘 | 이름 | 사용 목적 |
+|---|---|---|
+| <img src="./docs/icons/seoulopen.png" width="28" /> | 서울 열린데이터광장 API | 실시간 따릉이 대여소 정보 수집 |
+| <img src="./docs/icons/seoulbike.png" width="28" /> | 서울시 공공자전거 따릉이 데이터 | 대여 이력 및 대여소 기반 수요 분석 |
+| <img src="./docs/icons/weather.png" width="28" /> | 기상 데이터 | 날씨 요인을 반영한 대여량 예측 피처 구성 |
+| <img src="./docs/icons/holiday.png" width="28" /> | 공휴일 데이터 | 평일, 주말, 공휴일 수요 패턴 반영 |
+
+### Tools
+
+| 아이콘 | 이름 | 사용 목적 |
+|---|---|---|
+| <img src="./docs/icons/git.png" width="28" /> | Git | 프로젝트 버전 관리 |
+| <img src="./docs/icons/github.png" width="28" /> | GitHub | 프로젝트 코드 공유 및 협업 |
+| <img src="./docs/icons/vscode.jpeg" width="28" /> | VS Code | 프론트엔드 및 백엔드 개발 환경 |
+| <img src="./docs/icons/mysql workbench.png" width="28" /> | MySQL Workbench | ERD 확인 및 데이터베이스 구조 관리 |
+| <img src="./docs/icons/npm.png" width="28" /> | npm | 프론트엔드 패키지 설치 및 실행 관리 |
+
+---
+
+
+## 데이터 및 산출물 전체 구조
 
 ```text
 SKN29-2nd-5Team/
-├── README.md                   
-├── .env                
-├── .gitignore                  
+├── README.md
+├── .env
+├── .gitignore
 │
-├── backend/                    
+├── 3_model/
+│   ├── best_model.zip
+│   └── model_metadata.md
+│
+├── backend/
 │   ├── main.py
 │   ├── requirements.txt
-│   ├── api/                    
+│   ├── api/
 │   │   ├── __init__.py
 │   │   ├── chart.py
 │   │   ├── predict.py
 │   │   ├── realtime.py
-│   │   └── stats.py
-│   ├── core/                   
+│   │   ├── stats.py
+│   │   └── validation.py
+│   ├── backend_data/
+│   │   ├── bike_2026_final_28features_for_model.parquet
+│   │   ├── lgbm_v1.pkl
+│   │   ├── xgboost_tuned_v1.pkl
+│   │   └── (기타 모델/설정 파일들)
+│   ├── core/
 │   │   ├── __init__.py
 │   │   ├── config.py
 │   │   └── database.py
-│   └── services/              
+│   ├── database/
+│   │   └── schema.sql
+│   └── services/
 │       ├── __init__.py
 │       ├── chart_service.py
 │       ├── data_utils.py
 │       ├── realtime_service.py
 │       └── validation_service.py
 │
-├── frontend/                  
-│   ├── index.html
+├── frontend/
 │   ├── package.json
 │   ├── vite.config.js
-│   ├── public/                
+│   ├── public/
 │   │   ├── home__main.png
 │   │   └── home_top.png
 │   └── src/
@@ -45,43 +217,59 @@ SKN29-2nd-5Team/
 │       ├── App.jsx
 │       ├── App.css
 │       ├── index.css
-│       ├── api/               
+│       ├── api/
 │       │   └── client.js
-│       └── pages/             
-│           ├── Home.jsx
-│           ├── HeatmapPage.jsx
+│       ├── assets/
+│       │   ├── hero.png
+│       │   ├── react.svg
+│       │   └── vite.svg
+│       └── pages/
 │           ├── ChartPage.jsx
+│           ├── HeatmapPage.jsx
+│           ├── Home.jsx
 │           └── Ttareungyeojido.jsx
 │
-├── models/                    
-│   ├── best_model.zip         
-│   ├── xgboost_tuned_v1.pkl    
-│   ├── lgbm_v1.pkl            
-│   └── model_metadata.md   
-│
-├── data/                    
-│   ├── raw/                
-│   │   ├── bike_history/     
-│   │   ├── holiday/           
-│   │   ├── station/         
-│   │   └── weather/          
-│   └── processed/            
-│       ├── train_2023_parts/
-│       ├── valid_2024_parts/
+├── data/
+│   ├── raw/
+│   │   ├── bike_history/
+│   │   ├── holiday/
+│   │   ├── station/
+│   │   └── weather/
+│   └── processed/
 │       ├── test_2025_parts/
-│       └── bike_final_28features.parquet 
+│       ├── train_2023_parts/
+│       └── valid_2024_parts/
 │
-├── notebooks/                
-│   ├── 01_preprocessing_pipeline.ipynb
-│   └── 02_modeling_evaluation.ipynb
+├── docs/
+│   ├── SKN29-2nd-5Team.pptx
+│   ├── 1_data_preprocessing_report.md
+│   ├── 2_model_training_report.md
+│   ├── database/
+│   │   ├── bike_db.png
+│   │   └── README.md
+│   ├── icons/
+│   │   └── (기술 스택 아이콘 이미지)
+│   ├── team/
+│   │   ├── choi_jiyong.png
+│   │   ├── jung_seung.png
+│   │   ├── park_junhee.png
+│   │   └── yoon_daesung.png
+│   └── webservice/
+│       ├── Homepage1.png
+│       ├── Homepage2.png
+│       ├── Homepage3.png
+│       ├── Homepage4.png
+│       ├── Homepage5.png
+│       ├── Homepage6.png
+│       ├── Homepage7.png
+│       └── Homepage8.png
 │
-└── docs/                   
-    ├── database/             
-    │   ├── bike_db.png       
-    │   ├── bike_db.sql       
-    │   └── bike_db.md          
-    ├── 1_data_preprocessing_report.md  
-    └── 2_model_training_report.md      
+├── image/
+│   └── 전처리_후_대여량_구간_분포.png
+│
+└── notebooks/
+    ├── 01_preprocessing_pipeline.ipynb
+    └── 02_modeling_evaluation.ipynb
 ```
 
 ---
@@ -97,22 +285,87 @@ SKN29-2nd-5Team/
 
 따릉이 대여 수요는 시간대, 요일, 계절, 날씨, 대여소 위치에 따라 크게 달라진다. 본 프로젝트는 공개 데이터를 기반으로 대여소별·시간대별 미래 대여량을 예측할 수 있는 학습 데이터셋과 모델을 구축하였다.
 
+프로젝트 발표 자료는 [`docs/SKN29-2nd-5Team.pptx`](./docs/SKN29-2nd-5Team.pptx)에 정리되어 있으며, 발표 흐름은 프로젝트 개요, 데이터 전처리, 피처 선정, 모델 선정, 서비스 화면 시연, 모델 예측 결과 및 한계점 순서로 구성되어 있다.
+
 ---
 
-## 2. 웹 서비스 기능 섹션 추가안
+## 2. 웹 서비스 주요 기능 및 구현 화면
 
-웹 서비스 주요 기능
+본 프로젝트는 **React 기반 프론트엔드**와 **FastAPI 백엔드**를 연동하여 따릉이 대여량 분석, 차트 시각화, 실시간 대여소 현황, 1시간 뒤 예상 잔여 대수 확인 기능을 제공한다.
 
-| 화면 | 설명 | 주요 데이터 |
+| 화면 | 설명 | 주요 데이터 및 기능 |
 |---|---|---|
-| 메인 화면 | 프로젝트 소개 및 서비스 진입 화면 | `home__main.png`, `home_top.png` |
-| 대여량 분포 분석 | 연도, 월, 자치구 조건에 따른 따릉이 대여량 히트맵 시각화 | `bike_usage_cache` |
-| 대여량 차트 분석 | 히트맵 캐시 데이터를 기반으로 대여소 Top5, 자치구 Top5, 월별 흐름 분석 | `bike_usage_cache` |
-| 실시간 대여소 현황 | 서울시 실시간 따릉이 API와 대여소 마스터 데이터를 결합하여 지도에 표시 | 서울시 실시간 API, `bike_markers` |
-| 1시간 뒤 예측 잔여 수 | 실시간 자전거 보유 수와 학습 모델 예측 결과를 결합해 1시간 뒤 예상 잔여 자전거 수 표시 | 실시간 API, XGBoost 모델 |
+| 메인 화면 | 프로젝트 서비스 진입 화면 | 서비스 메뉴 이동, 메인 비주얼 |
+| 대여량 분포 분석 | 연도, 월, 자치구 조건에 따른 따릉이 대여량 히트맵 시각화 | `bike_usage_heatmap_cache`, Leaflet 지도 |
+| 대여량 차트 분석 | 대여소 Top5, 자치구 Top5, 월별 흐름 시각화 | `bike_usage_heatmap_cache`, Recharts |
+| 실시간 대여소 현황 | 서울시 실시간 따릉이 API 기반 대여소 상태 지도 표시 | 서울 열린데이터광장 API, `bike_markers` |
+| 1시간 뒤 예측 잔여 수 | 실시간 자전거 보유 수와 학습 모델 예측 결과를 결합하여 예상 잔여 대수 제공 | 실시간 API, XGBoost 모델 |
 
-sql에 적재한 데이터를 'bike_usage_cache'로 저장하여 프로젝트 발표에 사용하였으나, 실제 배포 환경에서는 sql에 적재한 데이터를 사용해야한다.
-```
+> 발표 및 시연 단계에서는 SQL에 적재한 데이터를 `bike_usage_heatmap_cache`로 집계하여 빠르게 시각화하였다. 실제 배포 환경에서는 운영 DB에 적재된 최신 데이터를 기준으로 캐시를 갱신하여 사용하는 구조를 목표로 한다.
+
+### 2-1. 메인 화면
+
+서비스에 접속했을 때 가장 먼저 보이는 화면이다. 상단 메뉴를 통해 **대여량 분포 분석**, **대여량 차트 분석**, **실시간 대여소 현황** 페이지로 이동할 수 있다.
+
+<p align="center">
+  <img src="./docs/webservice/Homepage1.png" width="850" />
+</p>
+
+### 2-2. 대여량 분포 분석 - 전체 조건 기준 히트맵
+
+연도, 월, 자치구 조건을 선택하여 서울시 따릉이 대여량 분포를 지도 위에서 확인할 수 있다. 선택한 조건에 따라 대여량이 많은 지역이 히트맵 형태로 표시된다.
+
+<p align="center">
+  <img src="./docs/webservice/Homepage2.png" width="850" />
+</p>
+
+### 2-3. 대여량 분포 분석 - 조건 필터 적용 화면
+
+특정 연도, 월, 자치구를 필터링하면 선택 조건에 해당하는 대여소와 대여량 분포만 지도에 표시된다. 이를 통해 지역별·시기별 따릉이 이용 패턴을 비교할 수 있다.
+
+<p align="center">
+  <img src="./docs/webservice/Homepage3.png" width="850" />
+</p>
+
+### 2-4. 대여량 차트 분석 - 대여소 Top5
+
+선택한 조건에서 대여량이 높은 대여소 상위 5개를 막대차트로 제공한다. 특정 기간에 이용량이 집중되는 대여소를 빠르게 확인할 수 있다.
+
+<p align="center">
+  <img src="./docs/webservice/Homepage4.png" width="850" />
+</p>
+
+### 2-5. 대여량 차트 분석 - 자치구 Top5
+
+선택한 조건에서 대여량이 높은 자치구 상위 5개를 막대차트로 제공한다. 자치구 단위로 따릉이 이용량 차이를 비교할 수 있다.
+
+<p align="center">
+  <img src="./docs/webservice/Homepage5.png" width="850" />
+</p>
+
+### 2-6. 대여량 차트 분석 - 월별 흐름
+
+연도별·월별 누적 대여량 흐름을 꺾은선 그래프로 제공한다. 계절, 월별 이용량 변화와 수요 패턴을 직관적으로 확인할 수 있다.
+
+<p align="center">
+  <img src="./docs/webservice/Homepage6.png" width="850" />
+</p>
+
+### 2-7. 실시간 대여소 현황 - 현재 잔여 대수 확인
+
+서울시 실시간 따릉이 API를 호출하여 대여소별 현재 거치 대수, 거치율, 대여 가능 상태를 지도 마커로 표시한다. 마커를 클릭하면 대여소 상세 정보가 팝업으로 제공된다.
+
+<p align="center">
+  <img src="./docs/webservice/Homepage7.png" width="850" />
+</p>
+
+### 2-8. 실시간 대여소 현황 - 1시간 뒤 예상 잔여 대수
+
+현재 잔여 대수와 대여소 정보를 기반으로 머신러닝 모델 예측 결과를 결합하여 **1시간 뒤 예상 잔여 대수**를 함께 제공한다. 이를 통해 대여소 운영 및 재배치 의사결정에 활용할 수 있다.
+
+<p align="center">
+  <img src="./docs/webservice/Homepage8.png" width="850" />
+</p>
 
 ---
 
@@ -135,10 +388,9 @@ sql에 적재한 데이터를 'bike_usage_cache'로 저장하여 프로젝트 �
 
 ---
 
-## 4. DB/ERD 섹션 추가안
+## 4. DB/ERD 구조
 
-```md
-## 데이터베이스 구조
+### 데이터베이스 구조
 
 본 프로젝트는 분석 및 시각화를 위해 아래 3개 테이블을 사용한다.
 
@@ -158,7 +410,6 @@ ERD와 스키마 파일은 아래 위치에 정리한다.
 
 `bike_usage_heatmap_cache`는 히트맵 전용 캐시로 시작했지만, 최종 서비스에서는 차트 페이지에서도 함께 사용한다.  
 따라서 차트 페이지는 원본 전체 이력 테이블을 매번 직접 집계하지 않고, 이미 집계된 캐시 데이터를 기반으로 빠르게 대여소 Top5, 자치구 Top5, 월별 흐름을 계산한다.
-```
 
 ---
 
@@ -414,7 +665,6 @@ http://localhost:4173
 
 실시간 대여소 현황 API는 서울시 실시간 따릉이 API 결과와 내부 대여소 마스터 데이터를 매핑한다.  
 추가로 학습 모델을 이용해 현재 조건 기준 1시간 뒤 예상 자전거 잔여 수를 계산하여 프론트엔드에 제공한다.
-```
 
 ---
 
@@ -441,6 +691,9 @@ http://localhost:4173
 
 | 파일 | 설명 |
 |------|------|
-| `1_data_preprocessing_report.md` | 데이터셋 소개, EDA, 전처리, 데이터 분리 결과 |
-| `2_model_training_report.md` | 모델링 전략, 후보 모델 성능, 최종 모델 선정 |
+| `docs/SKN29-2nd-5Team.pptx` | 프로젝트 발표 자료, 서비스 시연 화면, 모델 예측 결과 및 한계점 정리 |
+| `docs/1_data_preprocessing_report.md` | 데이터셋 소개, EDA, 전처리, 데이터 분리 결과 |
+| `docs/2_model_training_report.md` | 모델링 전략, 후보 모델 성능, 최종 모델 선정 |
 | `3_model/model_metadata.md` | 최종 모델 환경, 하이퍼파라미터, 입력 스펙, 예측 예시 |
+| `docs/database/bike_db.png` | 서비스 데이터베이스 ERD 이미지 |
+| `docs/webservice/Homepage1.png` ~ `Homepage8.png` | 웹 서비스 구현 화면 캡처 |
