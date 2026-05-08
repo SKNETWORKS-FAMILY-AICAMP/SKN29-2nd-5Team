@@ -11,29 +11,33 @@
 
 ### 주요 산출물 바로가기
 
-| 구분 | 경로 | 확인 내용 |
-|---|---|---|
-| 프로젝트 발표 자료 | [`docs/SKN29-2nd-5Team.pptx`](./docs/SKN29-2nd-5Team.pptx) | 프로젝트 개요, 전처리 과정, 피처 설계, 모델 선정, 서비스 화면 시연, 한계점 |
-| 데이터 전처리 결과서 | [`docs/1_data_preprocessing_report.md`](./docs/1_data_preprocessing_report.md) | 원천 데이터, 전처리 방식, 최종 학습 데이터 구성 |
-| 모델 학습 결과서 | [`docs/2_model_training_report.md`](./docs/2_model_training_report.md) | Baseline, XGBoost, LightGBM, GRU 성능 비교 및 최종 모델 선정 근거 |
-| 모델 메타데이터 | [`3_model/model_metadata.md`](./3_model/model_metadata.md) | 최종 모델 환경, 입력 피처, 하이퍼파라미터, 예측 예시 |
-| 웹 서비스 구현 화면 | [`docs/webservice/`](./docs/webservice/) | 메인 화면, 히트맵, 차트, 실시간 대여소 현황, 1시간 뒤 예측 잔여 대수 화면 |
-| DB/ERD 문서 | [`docs/database/`](./docs/database/) | 서비스용 테이블 구조, ERD, 스키마 |
+아래 항목은 평가자가 먼저 확인하면 좋은 핵심 산출물이다.
+
+- **프로젝트 발표 자료**: [PPTX](./docs/SKN29-2nd-5Team.pptx)
+  - 프로젝트 개요, 전처리 과정, 피처 설계, 모델 선정, 서비스 화면 시연, 한계점
+- **데이터 전처리 결과서**: [전처리 보고서](./docs/1_data_preprocessing_report.md)
+  - 원천 데이터, 전처리 방식, 최종 학습 데이터 구성
+- **모델 학습 결과서**: [모델 학습 보고서](./docs/2_model_training_report.md)
+  - Baseline, XGBoost, LightGBM, GRU 성능 비교 및 최종 모델 선정 근거
+- **모델 메타데이터**: [모델 메타데이터](./3_model/model_metadata.md)
+  - 최종 모델 환경, 입력 피처, 하이퍼파라미터, 예측 예시
+- **웹 서비스 구현 화면**: [웹 서비스 캡처 폴더](./docs/webservice/)
+  - 메인 화면, 히트맵, 차트, 실시간 대여소 현황, 1시간 뒤 예측 잔여 대수 화면
+- **DB/ERD 문서**: [DB/ERD 폴더](./docs/database/)
+  - 서비스용 테이블 구조, ERD, 스키마
 
 ### README 목차
 
-| 순서 | 섹션 | 평가 포인트 |
-|---:|---|---|
-| 1 | 프로젝트 개요 | 문제 유형, 예측 대상, 활용 방안 |
-| 2 | 웹 서비스 주요 기능 및 구현 화면 | 실제 구현 화면과 기능 설명 |
-| 3 | 데이터셋 소개 | 사용 데이터, 기간, 학습/검증/테스트 분리 |
-| 4 | DB/ERD 구조 | 서비스 데이터베이스 구조와 캐시 테이블 활용 |
-| 5 | 전처리 요약 | 타겟 생성, 외부 데이터 결합, 피처 생성 |
-| 6 | 모델링 전략 | 평가 지표와 후보 모델 선정 이유 |
-| 7 | 모델 성능 결과 | Baseline 대비 최종 모델 성능 개선 |
-| 8~10 | 최종 모델 메타데이터·해석·예측 예시 | 모델 재현성과 예측 로직 |
-| 11~12 | 재현 방법·실행 방법 | 로컬 실행 및 API 확인 방법 |
-| 13 | 한계점 및 향후 개선 방향 | 운영 적용 시 보완 과제 |
+1. **프로젝트 개요**: 문제 유형, 예측 대상, 활용 방안
+2. **웹 서비스 주요 기능 및 구현 화면**: 실제 구현 화면과 기능 설명
+3. **데이터셋 소개**: 사용 데이터, 기간, 학습/검증/테스트 분리
+4. **DB/ERD 구조**: 서비스 데이터베이스 구조와 캐시 테이블 활용
+5. **전처리 요약**: 타겟 생성, 외부 데이터 결합, 피처 생성
+6. **모델링 전략**: 평가 지표와 후보 모델 선정 이유
+7. **모델 성능 결과**: Baseline 대비 최종 모델 성능 개선
+8~10. **최종 모델 메타데이터·해석·예측 예시**: 모델 재현성과 예측 로직
+11~12. **재현 방법·실행 방법**: 로컬 실행 및 API 확인 방법
+13. **한계점 및 향후 개선 방향**: 운영 적용 시 보완 과제
 
 ---
 
@@ -293,13 +297,23 @@ SKN29-2nd-5Team/
 
 본 프로젝트는 **React 기반 프론트엔드**와 **FastAPI 백엔드**를 연동하여 따릉이 대여량 분석, 차트 시각화, 실시간 대여소 현황, 1시간 뒤 예상 잔여 대수 확인 기능을 제공한다.
 
-| 화면 | 설명 | 주요 데이터 및 기능 |
-|---|---|---|
-| 메인 화면 | 프로젝트 서비스 진입 화면 | 서비스 메뉴 이동, 메인 비주얼 |
-| 대여량 분포 분석 | 연도, 월, 자치구 조건에 따른 따릉이 대여량 히트맵 시각화 | `bike_usage_heatmap_cache`, Leaflet 지도 |
-| 대여량 차트 분석 | 대여소 Top5, 자치구 Top5, 월별 흐름 시각화 | `bike_usage_heatmap_cache`, Recharts |
-| 실시간 대여소 현황 | 서울시 실시간 따릉이 API 기반 대여소 상태 지도 표시 | 서울 열린데이터광장 API, `bike_markers` |
-| 1시간 뒤 예측 잔여 수 | 실시간 자전거 보유 수와 학습 모델 예측 결과를 결합하여 예상 잔여 대수 제공 | 실시간 API, XGBoost 모델 |
+### 기능 요약
+
+- **메인 화면**
+  - 설명: 프로젝트 서비스 진입 화면
+  - 주요 데이터 및 기능: 서비스 메뉴 이동, 메인 비주얼
+- **대여량 분포 분석**
+  - 설명: 연도, 월, 자치구 조건에 따른 따릉이 대여량 히트맵 시각화
+  - 주요 데이터 및 기능: `bike_usage_heatmap_cache`, Leaflet 지도
+- **대여량 차트 분석**
+  - 설명: 대여소 Top5, 자치구 Top5, 월별 흐름 시각화
+  - 주요 데이터 및 기능: `bike_usage_heatmap_cache`, Recharts
+- **실시간 대여소 현황**
+  - 설명: 서울시 실시간 따릉이 API 기반 대여소 상태 지도 표시
+  - 주요 데이터 및 기능: 서울 열린데이터광장 API, `bike_markers`
+- **1시간 뒤 예측 잔여 수**
+  - 설명: 실시간 자전거 보유 수와 학습 모델 예측 결과를 결합하여 예상 잔여 대수 제공
+  - 주요 데이터 및 기능: 실시간 API, XGBoost 모델
 
 > 발표 및 시연 단계에서는 SQL에 적재한 데이터를 `bike_usage_heatmap_cache`로 집계하여 빠르게 시각화하였다. 실제 배포 환경에서는 운영 DB에 적재된 최신 데이터를 기준으로 캐시를 갱신하여 사용하는 구조를 목표로 한다.
 
@@ -371,12 +385,24 @@ SKN29-2nd-5Team/
 
 ## 3. 데이터셋 소개
 
-| 데이터 구분 | 원천 파일 | 기간 또는 범위 | 주요 역할 |
-|---|---|---|---|
-| 따릉이 대여 이력 | `data/raw/bike_history/{year}/bike_history_YYYY_MM.parquet` | 2023년 ~ 2025년, 월별 parquet 36개 | 대여소·날짜·시간 단위 `rental_count` 생성 |
-| 대여소 정보 | `data/raw/station/station_master.csv`, `station_info.xlsx` | 대여소 마스터 3,417건 | 위도, 경도, 주소, 대여소 속성 결합 |
-| 날씨 정보 | `data/raw/weather/{year}/asos_seoul_108_*.csv` | 2018-12-25 ~ 2026-03-31 | 기온, 습도, 풍속, 강수량 결합 |
-| 공휴일 정보 | `data/raw/holiday/holiday_2019_2026.csv` | 2019년 ~ 2026년, 150건 | 공휴일 여부와 주말 여부를 결합해 `is_day_off` 생성 |
+### 원천 데이터 구성
+
+- **따릉이 대여 이력**
+  - 원천 파일: `data/raw/bike_history/{year}/bike_history_YYYY_MM.parquet`
+  - 기간 또는 범위: 2023년 ~ 2025년, 월별 parquet 36개
+  - 주요 역할: 대여소·날짜·시간 단위 `rental_count` 생성
+- **대여소 정보**
+  - 원천 파일: `data/raw/station/station_master.csv`, `station_info.xlsx`
+  - 기간 또는 범위: 대여소 마스터 3,417건
+  - 주요 역할: 위도, 경도, 주소, 대여소 속성 결합
+- **날씨 정보**
+  - 원천 파일: `data/raw/weather/{year}/asos_seoul_108_*.csv`
+  - 기간 또는 범위: 2018-12-25 ~ 2026-03-31
+  - 주요 역할: 기온, 습도, 풍속, 강수량 결합
+- **공휴일 정보**
+  - 원천 파일: `data/raw/holiday/holiday_2019_2026.csv`
+  - 기간 또는 범위: 2019년 ~ 2026년, 150건
+  - 주요 역할: 공휴일 여부와 주말 여부를 결합해 `is_day_off` 생성
 
 최종 학습 데이터는 원본 개별 대여 기록을 대여소·날짜·시간 단위로 집계한 회귀 예측 데이터셋이다.
 
@@ -394,19 +420,18 @@ SKN29-2nd-5Team/
 
 본 프로젝트는 분석 및 시각화를 위해 아래 3개 테이블을 사용한다.
 
-| 테이블 | 역할 |
-|---|---|
-| `bike_markers` | 대여소 ID, 이름, 자치구, 주소, 위도, 경도, 거치대 수량을 저장하는 대여소 마스터 테이블 |
-| `bike_usage` | 대여소별 실제 대여 이력과 날짜, 시간, 자치구, 좌표, 적설 여부 등을 저장하는 대여 이력 테이블 |
-| `bike_usage_heatmap_cache` | 프론트엔드 히트맵과 차트 페이지를 빠르게 표시하기 위해 연도·월·대여소 단위로 미리 집계한 캐시 테이블 |
+- `bike_markers`
+  - 대여소 ID, 이름, 자치구, 주소, 위도, 경도, 거치대 수량을 저장하는 대여소 마스터 테이블
+- `bike_usage`
+  - 대여소별 실제 대여 이력과 날짜, 시간, 자치구, 좌표, 적설 여부 등을 저장하는 대여 이력 테이블
+- `bike_usage_heatmap_cache`
+  - 프론트엔드 히트맵과 차트 페이지를 빠르게 표시하기 위해 연도·월·대여소 단위로 미리 집계한 캐시 테이블
 
 ERD와 스키마 파일은 아래 위치에 정리한다.
 
-| 파일 | 설명 |
-|---|---|
-| `docs/database/bike_db.png` | ERD 이미지 |
-| `docs/database/bike_db.sql` | DB 테이블 생성 스키마 |
-| `docs/database/bike_db.md` | 테이블 및 컬럼 설명 문서 |
+- [ERD 이미지](./docs/database/bike_db.png): `docs/database/bike_db.png`
+- [DB 테이블 생성 스키마](./docs/database/bike_db.sql): `docs/database/bike_db.sql`
+- [테이블 및 컬럼 설명 문서](./docs/database/bike_db.md): `docs/database/bike_db.md`
 
 `bike_usage_heatmap_cache`는 히트맵 전용 캐시로 시작했지만, 최종 서비스에서는 차트 페이지에서도 함께 사용한다.  
 따라서 차트 페이지는 원본 전체 이력 테이블을 매번 직접 집계하지 않고, 이미 집계된 캐시 데이터를 기반으로 빠르게 대여소 Top5, 자치구 Top5, 월별 흐름을 계산한다.
@@ -689,11 +714,28 @@ http://localhost:4173
 
 ## 참고 산출물
 
-| 파일 | 설명 |
-|------|------|
-| `docs/SKN29-2nd-5Team.pptx` | 프로젝트 발표 자료, 서비스 시연 화면, 모델 예측 결과 및 한계점 정리 |
-| `docs/1_data_preprocessing_report.md` | 데이터셋 소개, EDA, 전처리, 데이터 분리 결과 |
-| `docs/2_model_training_report.md` | 모델링 전략, 후보 모델 성능, 최종 모델 선정 |
-| `3_model/model_metadata.md` | 최종 모델 환경, 하이퍼파라미터, 입력 스펙, 예측 예시 |
-| `docs/database/bike_db.png` | 서비스 데이터베이스 ERD 이미지 |
-| `docs/webservice/Homepage1.png` ~ `Homepage8.png` | 웹 서비스 구현 화면 캡처 |
+최종 제출물 기준으로 산출물을 다시 한 번 점검할 수 있도록 정리하였다. 화면이 길어지지 않도록 상세 목록은 접기/펼치기 형태로 구성하였다.
+
+<details>
+<summary><b>참고 산출물 상세 목록 보기</b></summary>
+
+- **프로젝트 발표 자료**
+  - 파일: [`docs/SKN29-2nd-5Team.pptx`](./docs/SKN29-2nd-5Team.pptx)
+  - 설명: 프로젝트 발표 자료, 서비스 시연 화면, 모델 예측 결과 및 한계점 정리
+- **데이터 전처리 결과서**
+  - 파일: [`docs/1_data_preprocessing_report.md`](./docs/1_data_preprocessing_report.md)
+  - 설명: 데이터셋 소개, EDA, 전처리, 데이터 분리 결과
+- **모델 학습 결과서**
+  - 파일: [`docs/2_model_training_report.md`](./docs/2_model_training_report.md)
+  - 설명: 모델링 전략, 후보 모델 성능, 최종 모델 선정
+- **모델 메타데이터**
+  - 파일: [`3_model/model_metadata.md`](./3_model/model_metadata.md)
+  - 설명: 최종 모델 환경, 하이퍼파라미터, 입력 스펙, 예측 예시
+- **서비스 데이터베이스 ERD 이미지**
+  - 파일: [`docs/database/bike_db.png`](./docs/database/bike_db.png)
+  - 설명: 서비스 데이터베이스 ERD 이미지
+- **웹 서비스 구현 화면 캡처**
+  - 파일: [`docs/webservice/Homepage1.png`](./docs/webservice/Homepage1.png) ~ `Homepage8.png`
+  - 설명: 웹 서비스 구현 화면 캡처
+
+</details>
